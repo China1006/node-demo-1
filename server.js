@@ -28,7 +28,14 @@ var server = http.createServer(function(request, response) {
   if (path === "/") {
     response.statusCode = 200;
     response.setHeader("Content-Type", "text/html;charset=utf-8");
-    response.write(`好的，你已经进入了我的网页里了，出不去了！哈哈哈哈哈`);
+    response.write(`
+    <!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="/x"
+    </head>
+    <body>
+    <h1>好的，你已经进入了我的网页里了，出不去了！哈哈哈哈哈</h1>
+    </body>`);
     response.end();
   } else if (path === "/x") {
     response.statusCode = 200;
